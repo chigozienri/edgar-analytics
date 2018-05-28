@@ -10,4 +10,12 @@ parser.add_argument('output_filename')  # output file
 
 args = parser.parse_args()
 
-print(args.input_filename, args.inactivity_period, args.output_filename)
+# data = np.genfromtxt(args.input_filename) This didn't work, to fix later. For now, just use csv library
+with open(args.input_filename, 'r') as f:
+    csvdata = np.array(list(csv.reader(f)))
+
+header = csvdata[:1]
+data = csvdata[1:]
+
+print(header)
+print(data)
