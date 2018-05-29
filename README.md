@@ -6,10 +6,12 @@ A structured numpy array called data is created which contains the data from the
 
 ## Dependencies
 Numpy 1.14+
+
 dateutil 2.7.3+
 
 ### Builtin
 datetime
+
 argparse 
 
 ## Run Instructions
